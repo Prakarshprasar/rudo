@@ -1,7 +1,6 @@
 const express = require("express")
 const app = express()
 
-const Customer=require("./Models/customers")
 
 const connection =require("./db/db")
 const cors = require("cors")
