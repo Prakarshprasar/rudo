@@ -22,44 +22,10 @@ app.use("/customer",customRouter)
 app.use("/cruise",cruiseRouter)
 
 
-
-
-let myargs=process.argv.slice(2);
-
-
-switch(myargs[0]){
-    case "customer" :{
-        
-        
-        return
-
-       
-        
-        
-    }
-    case "cruiser" :{
-        
-        return ;
-
-    }
-    case "manual":{
-        console.log("customer for list of customer, Manual for Manual about search, exit for exit ")
-    }
-    case "exit":{
-        
-        return 
-    }
-    default:{
-        return
-    }
-}
-
-
-
-
-
-const PORT = process.env.PORT || 8080 
-app.listen(PORT,()=>{
+const port = process.env.PORT
+app.listen(port,()=>{
   connection;
-    console.log("server started on  http://localhost:8080")
+    console.log("server started ")
 })
+
+
