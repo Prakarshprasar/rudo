@@ -7,6 +7,7 @@ const connection =require("./db/db")
 const cors = require("cors")
 
 const customRouter = require("./Routes/customRoute")
+const cruiseRouter = require("./Routes/cruiseRoute")
 
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
@@ -19,6 +20,7 @@ app.get("/", async(req,res) => {
 })
 
 app.use("/customer",customRouter)
+app.use("/cruise",cruiseRouter)
 
 
 
@@ -28,13 +30,8 @@ let myargs=process.argv.slice(2);
 
 switch(myargs[0]){
     case "customer" :{
-        let ans;
-        customRouter.get("/customer/main", async(req,res)=>{
-            ans = await  Customer.find({})
-            
-            console.log(ans)
-            
-        })
+        
+        
         return
 
        
