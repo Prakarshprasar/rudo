@@ -28,4 +28,28 @@ app.listen(port,()=>{
     console.log("server started ")
 })
 
+let myargs=process.argv.slice(2);
+
+
+switch(myargs[0]){
+    case "cruise" :{
+        
+        return ;
+    }
+    case "customer" :{
+        
+        return ;
+
+    }
+    case "manual":{
+        console.log("cruise for cruise list , customer for customer list, manual for manual for help, exit for exit")
+        return 
+    }
+    case "exit":{
+        
+        return 
+    }
+    
+    
+}
 
